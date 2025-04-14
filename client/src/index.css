@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Your existing base styles */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* ---------------------------
+     Add these lines
+     --------------------------- */
+  /* Give headings black in light mode, off‐white in dark mode */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+
+  /* Make normal text gray in light mode, lighter in dark mode */
+  p, li, span, a, div {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+}
