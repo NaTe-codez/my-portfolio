@@ -29,7 +29,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" 
+              src="images\story.jpg" 
               alt="Working with community members in Africa" 
               className="rounded-xl shadow-lg w-full"
             />
