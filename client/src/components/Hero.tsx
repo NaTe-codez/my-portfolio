@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import TechnoRippleBackground from "./TechnoRippleBackground"; // New import
+import TechnoRippleBackground from "./TechnoRippleBackground";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  // Add state to handle animation timing
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const fadeInUpVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: (custom: number) => ({
+    visible: (custom) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -17,42 +25,40 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-16 pb-12 relative">
-      {/* Render the techno ripple background */}
+    <section id="hero" className="min-h-screen flex items-center pt-16 pb-12 relative overflow-hidden">
       <TechnoRippleBackground />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <motion.h2 
               custom={1} 
               initial="hidden" 
-              animate="visible" 
+              animate={isLoaded ? "visible" : "hidden"} 
               variants={fadeInUpVariant}
-              className="text-xl md:text-2xl text-orange-500 mb-4"
+              className="text-xl md:text-2xl text-orange-500 mb-4 font-medium"
             >
               Founder • Strategist • Changemaker
             </motion.h2>
 
-            {/* Added 'text-gray-900 dark:text-white' to fix black text in dark mode */}
             <motion.h1 
               custom={2} 
               initial="hidden" 
-              animate="visible" 
+              animate={isLoaded ? "visible" : "hidden"} 
               variants={fadeInUpVariant}
               className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900 dark:text-white"
             >
               Empowering Africa's <br />
               Future
-              <span className="text-blue-600 dark:text-blue-400">
-                -One Bold Venture at a Time
+              <span className="text-blue-600 dark:text-blue-400 block md:inline">
+                {" "}One Bold Venture at a Time
               </span>
             </motion.h1>
 
             <motion.p 
               custom={3} 
               initial="hidden" 
-              animate="visible" 
+              animate={isLoaded ? "visible" : "hidden"} 
               variants={fadeInUpVariant}
               className="text-lg md:text-xl mb-8 max-w-lg text-gray-700 dark:text-gray-300"
             >
@@ -62,12 +68,13 @@ export default function Hero() {
             <motion.div 
               custom={4} 
               initial="hidden" 
-              animate="visible" 
+              animate={isLoaded ? "visible" : "hidden"} 
               variants={fadeInUpVariant}
               className="flex flex-wrap gap-4"
             >
               <Button 
-                className="px-6 py-3 bg-gray-900 text-white dark:bg-gray-900 dark:text-white rounded-md hover:bg-opacity-90 transition-all font-medium"
+                size="lg"
+                className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all font-medium"
                 asChild
               >
                 <a href="#projects">Explore My Work</a>
@@ -75,7 +82,8 @@ export default function Hero() {
 
               <Button 
                 variant="outline" 
-                className="px-6 py-3 border border-gray-900 dark:border-white rounded-md text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-medium"
+                size="lg"
+                className="border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all font-medium"
                 asChild
               >
                 <a href="#contact">Get in Touch</a>
@@ -85,12 +93,17 @@ export default function Hero() {
 
           <motion.div 
             className="order-1 md:order-2 flex justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isLoaded ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-600 dark:bg-blue-400 rounded-2xl -rotate-6"></div>
+              <motion.div 
+                className="absolute inset-0 bg-blue-600 dark:bg-blue-400 rounded-2xl"
+                initial={{ rotate: 0 }}
+                animate={{ rotate: -6 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              ></motion.div>
               <img 
                 src="/images/godwin.jpg" 
                 alt="Godwin Jonathan" 
