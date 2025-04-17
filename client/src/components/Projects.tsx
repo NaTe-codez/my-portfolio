@@ -328,7 +328,7 @@ export default function Projects() {
         
         <div className="mt-12 text-center">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/NaTe-codez" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
