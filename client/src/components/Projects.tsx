@@ -108,10 +108,10 @@ const dataProjects: Project[] = [
   },
   {
     id: 11,
-    title: "Defense Deck",
-    description: "A national defense strategy dashboard showcasing transparency, budgeting, and force structure.",
+    title: "Defence Deck",
+    description: "My Capstone defence deck",
     image: "images/capstone.png",
-    tags: ["Defense", "Policy", "Strategy"],
+    tags: ["Research", "Design", "Presentation"],
     link: "https://drive.google.com/file/d/1CscVt3yvz0CcMQX3QWNrTObq62uhOMYm/view?usp=sharing",
   },
   {
