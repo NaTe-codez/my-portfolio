@@ -64,8 +64,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            From Silicon Valley to African classrooms, I'm dedicated to creating systems that make opportunity accessible to all. My work spans education, leadership development, and startup infrastructure.
-          </motion.p>
+Growing up in multiple underserved communities, I learned early that opportunity is something you build, not something you wait for. With a determination to change the world (as crazy as that sounds now that my frontal lobe is fully developed) and a strong will to lead the most amazing life possible, I’ve had quite the incredible journey. From my first venture, STEM Club, that has impacted thousands of students in Africa, to exploring the exhilarating powerhouse for entrepreneurship and development that is Silicon Valley two years in a row, and now building The Africa Initiative to transform African entrepreneurship—every step has felt like defying some odds. I hope this gives you a glimpse into the magic I’ve been building.            </motion.p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -96,15 +95,15 @@ export default function About() {
               My Journey
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              My path began in Nigeria's public schools, where I witnessed firsthand how unequal access to opportunity shapes futures. This sparked my mission: creating systems that level the playing field for African talent.
+              My mission started in Nigeria’s public schools, where I saw how unequal opportunities limit potential. That sparked a fire to create systems that empower African talent.
             </p>
             <p className="mb-6 text-gray-700 dark:text-gray-300">
-              From training hundreds of teachers with Ashoka Africa to supporting global leaders at African Leadership University, I've consistently focused on building bridges between potential and opportunity. In 2023, I founded The Africa Initiative to tackle systemic barriers facing African startups.
+              I’ve trained hundreds of teachers with Ashoka Africa, connected global leaders at African Leadership University, and in 2023, launched The Africa Initiative to break down barriers for African startups. From Lagos to Silicon Valley, where I met leaders like Bill Clinton, I’m driven to build a future where every African can thrive.  
             </p>
             
             <div className="p-5 bg-blue-50 dark:bg-blue-900/30 rounded-lg mb-6 border-l-4 border-blue-500">
               <p className="italic text-gray-700 dark:text-gray-300">
-                "Jonathan brings a rare combination of strategic thinking and execution excellence. He was really impactful leading the volunteer team for an unforgettable orientation."
+                “Godwin’s vision and execution are unmatched. He transformed our volunteer team and left a lasting impact.”
                 <span className="block mt-2 font-medium text-gray-900 dark:text-white">— Melody Abia, Community Associate at ALU</span>
               </p>
             </div>
