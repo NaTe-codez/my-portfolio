@@ -155,34 +155,6 @@ export default function Experience() {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-12">
-          {/* Contact Info Bar */}
-          <motion.div
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-blue-600"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600 dark:text-gray-300">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-blue-600" />
-                <span>Thejonathangodwin@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-blue-600" />
-                <span>+250790801277</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Linkedin className="h-4 w-4 text-blue-600" />
-                <span>LinkedIn Profile</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ExternalLink className="h-4 w-4 text-blue-600" />
-                <span>Portfolio</span>
-              </div>
-            </div>
-          </motion.div>
-
           {/* Featured Experiences */}
           {experiences.slice(0, 3).map((exp, index) => (
             <motion.div
