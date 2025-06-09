@@ -130,7 +130,7 @@ const tools: Tool[] = [
 
 export default function Experience() {
   // Replace this with your actual PDF file path
-  const resumePdfPath = '/Godwin_Jonathan_Resume.pdf';
+  const resumePdfPath = 'https://drive.google.com/file/d/1md0SLGj821SZDwGGaUx5bRt6GZ2IkR4C/view?usp=drive_link';
   
   const handleDownloadResume = () => {
     // Create a temporary anchor element to trigger download
