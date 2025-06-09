@@ -39,8 +39,9 @@ export default function About() {
           <motion.h2 
             className="text-3xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             Hi, I'm <span className="text-blue-600 dark:text-blue-400">Godwin Jonathan</span>
           </motion.h2>
@@ -48,18 +49,20 @@ export default function About() {
           <motion.div
             className="flex items-center justify-center mb-6"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             <MapPin className="h-5 w-5 text-orange-500 mr-2" />
             <span className="text-gray-600 dark:text-gray-400 font-medium">Nigerian-born, Currently in Kigali, Rwanda</span>
           </motion.div>
           
           <motion.div 
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500 min-h-[200px] flex items-center justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
           >
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               Growing up in multiple underserved communities, I learned early that opportunity is something you build, not something you wait for. With a determination to change the world (as crazy as that sounds now that my frontal lobe is fully developed) and a strong will to lead the most amazing life possible, I’ve had quite the incredible journey. From my first venture, STEM Club, that has impacted thousands of students in Africa, to exploring the exhilarating powerhouse for entrepreneurship and development that is Silicon Valley two years in a row, and now building The Africa Initiative to transform African entrepreneurship—every step has felt like defying some odds. I hope this gives you a glimpse into the magic I’ve been building.
@@ -70,8 +73,9 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className="relative"
           >
             <img 
@@ -86,8 +90,9 @@ export default function About() {
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
               My Journey
@@ -122,8 +127,9 @@ export default function About() {
           <motion.h3 
             className="text-2xl font-bold mb-8 text-center"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             Impact Highlights
           </motion.h3>
@@ -134,8 +140,9 @@ export default function About() {
                 key={index} 
                 className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 <div className="mb-4">
                   {achievement.icon}
@@ -151,8 +158,9 @@ export default function About() {
           <motion.div 
             className="md:col-span-1"
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
               Core Values
@@ -167,8 +175,9 @@ export default function About() {
                   key={index} 
                   className="flex items-start"
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <Check className="h-6 w-6 text-orange-500 mt-0.5 flex-shrink-0" />
                   <span className="ml-2 text-gray-700 dark:text-gray-300">{value}</span>
@@ -180,8 +189,9 @@ export default function About() {
           <motion.div 
             className="md:col-span-2"
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
               Current Focus: The Africa Initiative
